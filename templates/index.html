@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Backup & Recovery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Cloud Backup & Recovery</h1>
+
+        <div class="upload-section">
+            <input type="file" id="fileInput" title="Choose a file to upload" placeholder="Choose a file">
+            <button onclick="uploadFile()">Upload</button>
+        </div>
+
+        <h2>Uploaded Files</h2>
+        <ul id="fileList">
+            {% for file in files %}
+            <li>
+                <span>{{ file }}</span>
+                <div class="actions">
+                    <button class="download" onclick="downloadFile('{{ file }}')">⬇ Download</button>
+                    <button class="delete" onclick="deleteFile('{{ file }}')">🗑 Delete</button>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

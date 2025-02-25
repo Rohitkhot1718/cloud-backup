@@ -1,0 +1,3 @@
+flask
+python-dotenv
+ibm_boto3
