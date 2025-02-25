@@ -24,8 +24,8 @@ This project is a simple **Cloud Backup & Recovery** web application that allows
 
 ### 2️⃣ Clone the Repository
 ```
-git clone https://github.com/your-username/your-repo.git
-cd your-repo
+git clone https://github.com/Rohitkhot1718/cloud-backup
+cd cloud-backup
 ```
 
 ### 3️⃣ Install Dependencies
